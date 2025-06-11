@@ -1,0 +1,118 @@
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+.glow {
+  text-align: center;
+  font-size: 2.5em;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0ff;
+  }
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.complete {
+  background-color: #00c853;
+  color: white;
+  margin-right: 6px;
+}
+
+.delete {
+  background-color: #d50000;
+  color: white;
+}
+
+.loader {
+  margin: 20px auto;
+  border: 4px solid #ccc;
+  border-top: 4px solid #0ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.task-section {
+  margin-top: 30px;
+}
+
+.task-section h2 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #0ff;
+  padding-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px;
+  background-color: #2e2e4e;
+  border-bottom: 1px solid #444;
+  border-radius: 6px;
+}
+
+.completed-list li {
+  background-color: #3e3e5e;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
